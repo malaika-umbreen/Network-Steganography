@@ -1,0 +1,424 @@
+Dataset "preprocessed_master_dataset.csv".
+
+
+Dataset shape:
+
+Rows:13,848
+Columns:230
+
+You instructed:
+
+ Remove 2 features: src_port, dst_port
+ Labels should not be counted as model features
+ Labels must still be mentioned
+
+
+### Label Features
+
+
+These are not used as input features.
+
+1. `label_protocol_enc`
+2. `label_binary`
+3. `label_technique`
+
+
+
+### Removed Port Features
+
+(Not counted)
+
+1. `src_port`
+2. `dst_port`
+
+---
+
+
+# PROTOCOL FEATURE CATEGORIZATION
+
+Total protocols:
+
+4 Protocols
+
+1. DNS
+2. ICMP
+3. TCP
+4. UDP
+
+All 225 features are categorized into:
+
+Header Manipulation
+Timing Obfuscation
+Flow Blending
+
+No feature is left uncategorized.
+
+
+
+
+After removing:
+
+ `src_port`
+ `dst_port`
+
+and excluding labels:
+
+ `label_protocol_enc`
+ `label_binary`
+ `label_technique`
+
+
+the dataset contains exactly:
+
+225 model features
+
+
+
+# 📊 Dataset Feature Categorization
+
+
+---
+
+# ✅ Final Complete Feature Categorization — All 4 Protocols
+
+---
+
+## 🔵 DNS — Total: 66 Features
+
+### DNS — Header Manipulation Features (20 + 32 n-gram = 52)
+
+Core Header Features (20):
+1. `total_bytes`
+2. `receiving_bytes`
+3. `sending_bytes`
+4. `min_packets_len`
+5. `max_packets_len`
+6. `dns_top_level_domain`
+7. `dns_second_level_domain`
+8. `dns_domain_name_length`
+9. `dns_subdomain_name_length`
+10. `numerical_percentage`
+11. `character_distribution`
+12. `character_entropy`
+13. `max_continuous_numeric_len`
+14. `max_continuous_alphabet_len`
+15. `max_continuous_consonants_len`
+16. `max_continuous_same_alphabet_len`
+17. `vowels_consonant_ratio`
+18. `conv_freq_vowels_consonants`
+19. `ans_resource_record_type`
+20. `ans_resource_record_class`
+
+
+N-gram Domain Name Features (32):
+
+
+21. `dns_domain_name_len`
+22. `dns_domain_name_digit_count`
+23. `dns_domain_name_letter_count`
+24. `dns_domain_name_special_count`
+25. `dns_domain_name_unique_chars`
+26. `dns_domain_name_entropy`
+27. `dns_domain_name_digit_ratio`
+28. `dns_domain_name_special_ratio`
+29. `uni_gram_domain_name_len`
+30. `uni_gram_domain_name_digit_count`
+31. `uni_gram_domain_name_letter_count`
+32. `uni_gram_domain_name_special_count`
+33. `uni_gram_domain_name_unique_chars`
+34. `uni_gram_domain_name_entropy`
+35. `uni_gram_domain_name_digit_ratio`
+36. `uni_gram_domain_name_special_ratio`
+37. `bi_gram_domain_name_len`
+38. `bi_gram_domain_name_digit_count`
+39. `bi_gram_domain_name_letter_count`
+40. `bi_gram_domain_name_special_count`
+41. `bi_gram_domain_name_unique_chars`
+42. `bi_gram_domain_name_entropy`
+43. `bi_gram_domain_name_digit_ratio`
+44. `bi_gram_domain_name_special_ratio`
+45. `tri_gram_domain_name_len`
+46. `tri_gram_domain_name_digit_count`
+47. `tri_gram_domain_name_letter_count`
+48. `tri_gram_domain_name_special_count`
+49. `tri_gram_domain_name_unique_chars`
+50. `tri_gram_domain_name_entropy`
+51. `tri_gram_domain_name_digit_ratio`
+52. `tri_gram_domain_name_special_ratio`
+
+---
+
+### DNS — Timing Obfuscation Features (7)
+
+1. `duration`
+2. `distinct_ttl_values`
+3. `ttl_values_min`
+4. `ttl_values_max`
+5. `ttl_values_mean`
+6. `ttl_values_mode`
+7. `ttl_values_median`
+
+---
+
+### DNS — Flow Blending Features (7)
+
+1. `packets_rate`
+2. `packets_len_rate`
+3. `mean_packets_len`
+4. `standard_deviation_packets_len`
+5. `variance_packets_len`
+6. `coefficient_of_variation_packets_len`
+7. `distinct_A_records`
+
+---
+
+## 🟠 ICMP — Total: 97 Features
+
+### ICMP — Header Manipulation Features (28)
+
+1. `icmp_type_code_entropy`
+2. `icmp_invalid_type_ratio`
+3. `icmp_non_echo_ratio`
+4. `icmp_type_diversity`
+5. `icmp_nonstandard_type_count`
+6. `icmp_code_field_entropy`
+7. `icmp_nonzero_code_ratio`
+8. `icmp_bad_checksum_ratio`
+9. `icmp_good_checksum_ratio`
+10. `icmp_checksum_entropy`
+11. `icmp_checksum_delta_mean`
+12. `icmp_checksum_delta_std`
+13. `ip_id_reuse_rate`
+14. `icmp_seq_increment_std`
+15. `icmp_seq_entropy`
+16. `icmp_seq_monotone_ratio`
+17. `icmp_seq_autocorr_lag1`
+18. `icmp_id_reuse_rate`
+19. `icmp_id_entropy`
+20. `icmp_id_delta_mean`
+21. `icmp_id_delta_std`
+22. `icmp_id_seq_correlation`
+23. `icmp_covert_id_count`
+24. `icmp_payload_len_mean`
+25. `icmp_payload_len_std`
+26. `icmp_payload_len_entropy`
+27. `icmp_payload_len_variance`
+28. `icmp_nonstd_payload_ratio`
+
+---
+
+### ICMP — Flow Blending Features (51)
+
+Payload Analysis (10):
+1. `payload_byte_entropy_mean`
+2. `payload_byte_entropy_std`
+3. `payload_compress_ratio_mean`
+4. `payload_compress_ratio_std`
+5. `payload_printable_ratio_mean`
+6. `payload_printable_ratio_std`
+7. `payload_null_byte_ratio_mean`
+8. `payload_null_byte_ratio_std`
+9. `payload_bigram_entropy_mean`
+10. `payload_bigram_entropy_std`
+
+Packet Size & Flow Stats (13):
+
+11. `flow_total_bytes`
+12. `flow_duration_sec`
+13. `flow_bytes_per_sec`
+14. `icmp_orphan_request_ratio`
+15. `flow_byte_asymmetry`
+16. `ip_ttl_mean`
+17. `pkt_size_mean`
+18. `pkt_size_std`
+19. `pkt_size_max`
+20. `pkt_size_median`
+21. `pkt_size_entropy`
+22. `pkt_size_skewness`
+23. `pkt_size_kurtosis`
+24. `pkt_size_coeff_variation`
+25. `pkt_size_iqr`
+
+Packet Size Bin Distribution (8):
+
+26. `pkt_size_bin_60_240`
+27. `pkt_size_bin_240_420`
+28. `pkt_size_bin_420_600`
+29. `pkt_size_bin_600_780`
+30. `pkt_size_bin_780_960`
+31. `pkt_size_bin_960_1140`
+32. `pkt_size_bin_1140_1320`
+33. `pkt_size_bin_1320_1442`
+
+Packet Size Transition Matrix (16):
+
+34. `pkt_size_trans_small_small`
+35. `pkt_size_trans_small_med`
+36. `pkt_size_trans_small_large`
+37. `pkt_size_trans_small_xlarge`
+38. `pkt_size_trans_med_small`
+39. `pkt_size_trans_med_med`
+40. `pkt_size_trans_med_large`
+41. `pkt_size_trans_med_xlarge`
+42. `pkt_size_trans_large_small`
+43. `pkt_size_trans_large_med`
+44. `pkt_size_trans_large_large`
+45. `pkt_size_trans_large_xlarge`
+46. `pkt_size_trans_xlarge_small`
+47. `pkt_size_trans_xlarge_med`
+48. `pkt_size_trans_xlarge_large`
+49. `pkt_size_trans_xlarge_xlarge`
+
+Flow Uniformity & Divergence (2):
+
+50. `pkt_uniform_size_ratio`
+51. `flow_kl_divergence_baseline`
+
+---
+
+### ICMP — Timing Obfuscation Features (18)
+
+1. `ipt_mean`
+2. `ipt_std`
+3. `ipt_min`
+4. `ipt_max`
+5. `ipt_median`
+6. `ipt_percentile_90`
+7. `ipt_percentile_99`
+8. `ipt_entropy`
+9. `ipt_skewness`
+10. `ipt_coeff_variation`
+11. `ipt_iqr`
+12. `ipt_autocorr_lag1`
+13. `ipt_autocorr_lag2`
+14. `ipt_autocorr_lag3`
+15. `ipt_periodicity_score`
+16. `ipt_timing_regularity`
+17. `ipt_jitter_mean`
+18. `ipt_jitter_std`
+
+---
+
+## 🟢 TCP — Total: 41 Features
+
+### TCP — Header Manipulation Features (18)
+
+1. `syn_count`
+2. `ack_count`
+3. `psh_count`
+4. `fin_count`
+5. `rst_count`
+6. `win_size_mean`
+7. `win_size_std`
+8. `win_size_max`
+9. `win_size_entropy`
+10. `win_size_changes`
+11. `seq_std_increment`
+12. `seq_entropy`
+13. `seq_large_jumps`
+14. `ack_unique_count`
+15. `checksum_entropy`
+16. `checksum_uniqueness_ratio`
+17. `retransmission_count`
+18. `segment_not_captured_count`
+
+---
+
+### TCP — Timing Obfuscation Features (15)
+
+1. `iat_median`
+2. `iat_variance`
+3. `iat_cv`
+4. `iat_entropy`
+5. `iat_skewness`
+6. `iat_kurtosis`
+7. `fwd_iat_mean`
+8. `fwd_iat_std`
+9. `fwd_iat_min`
+10. `fwd_iat_max`
+11. `bwd_iat_mean`
+12. `bwd_iat_std`
+13. `bwd_iat_min`
+14. `bwd_iat_max`
+15. `pkt_rate`
+
+---
+
+### TCP — Flow Blending Features (8)
+
+1. `pkt_len_mean`
+2. `pkt_len_std`
+3. `pkt_len_max`
+4. `pkt_len_min`
+5. `pkt_len_median`
+6. `pkt_len_entropy`
+7. `pkt_len_cv`
+8. `fwd_pkt_len_std`
+
+---
+
+## 🔴 UDP — Total: 26 Features
+
+### UDP — Header Manipulation Features (9)
+
+1. `fwd_pkt_len_max`
+2. `fwd_pkt_len_min`
+3. `fwd_pkt_len_mean`
+4. `fwd_pkt_len_std`
+5. `pkt_len_max`
+6. `pkt_len_min`
+7. `pkt_len_mean`
+8. `pkt_len_std`
+9. `fwd_header_len`
+
+---
+
+### UDP — Timing Obfuscation Features (10)
+
+1. `flow_duration`
+2. `flow_iat_mean`
+3. `flow_iat_max`
+4. `flow_iat_min`
+5. `flow_iat_std`
+6. `fwd_iat_tot`
+7. `fwd_iat_mean`
+8. `fwd_iat_max`
+9. `fwd_iat_min`
+10. `fwd_iat_std`
+
+---
+
+### UDP — Flow Blending Features (7)
+
+1. `tot_fwd_pkts`
+2. `totlen_fwd_pkts`
+3. `flow_byts_s`
+4. `flow_pkts_s`
+5. `fwd_pkts_s`
+6. `subflow_fwd_pkts`
+7. `subflow_fwd_byts`
+
+---
+
+## 📋 Final Summary Table
+
+| Protocol | Header Manipulation | Timing Obfuscation | Flow Blending | Total|
+|---|---|---|--- |---|
+| DNS  | 52 | 7  | 7  | 66 |
+| ICMP | 28 | 18 | 51 | 97 |
+| TCP  | 18 | 15 | 8  | 41 |
+| UDP  | 9  | 10 | 7  | 26 |
+
+| TOTALS| 107 | 50 | 73 | 225 |
+
+
+
+
+# GRAND TOTAL
+
+| Item                         | Count   |
+| ---------------------------- | ------- |
+| Total Features Used in Model |225|
+| Label Columns                | 3 |
+| Total Columns in Dataset     |228|
+

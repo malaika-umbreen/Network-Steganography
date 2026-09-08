@@ -1,0 +1,50 @@
+		TCP Flow Level Features
+
+
+	Features for each steganography detection category:
+
+
+## Header Manipulation Features: 26
+
+1. syn_count, ack_count, psh_count, fin_count, rst_count, urg_count
+2. syn_ratio, ack_ratio, psh_ratio, fin_ratio, rst_ratio, urg_ratio
+3. win_size_mean, win_size_std, win_size_min, win_size_max, win_size_variance, win_size_entropy, win_size_changes, win_size_cv
+4. seq_mean_increment, seq_std_increment, seq_entropy, seq_large_jumps
+5. ack_unique_count, ack_entropy
+
+## Flow Blending Features: 32
+
+1. pkt_len_mean, pkt_len_std, pkt_len_min, pkt_len_max, pkt_len_median, pkt_len_variance, pkt_len_entropy, pkt_len_cv
+2. payload_len_mean, payload_len_std, payload_len_min, payload_len_max, payload_len_entropy
+3. fwd_pkt_len_mean, fwd_pkt_len_std, fwd_pkt_len_min, fwd_pkt_len_max
+4. bwd_pkt_len_mean, bwd_pkt_len_std, bwd_pkt_len_min, bwd_pkt_len_max
+5. total_bytes, fwd_bytes, bwd_bytes
+6. fwd_bwd_pkt_ratio, fwd_bwd_bytes_ratio
+7. total_packets, fwd_packets, bwd_packets
+8. retransmission_count, retransmission_ratio, segment_not_captured_count, segment_not_captured_ratio
+
+## Time Obfuscation Features:    26
+
+1. duration, pkt_rate, fwd_pkt_rate, bwd_pkt_rate, burstiness
+2. iat_mean, iat_std, iat_min, iat_max, iat_median, iat_variance, iat_cv, iat_entropy, iat_skewness, iat_kurtosis
+3. fwd_iat_mean, fwd_iat_std, fwd_iat_min, fwd_iat_max
+4. bwd_iat_mean, bwd_iat_std, bwd_iat_min, bwd_iat_max
+
+
+Total: 84 features 26 header + 32 flow blending + 26 timing
+
+For Normal total available flows 120000 = 7000
+
+For covert total available flows Using features → Header: 26 | Blending: 33 | Timing: 23 features
+
+✅ Final shape: (1069, 90)
+
+✅ Technique distribution:
+label_technique
+1    268
+2    440
+3    361
+
+
+		
+

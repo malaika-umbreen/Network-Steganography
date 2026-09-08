@@ -1,0 +1,54 @@
+
+Kaggle DNS Tunneling Dataset (Organized by Technique) (38)
+
+Header Manipulation Features  24
+
+•	total_bytes
+•	receiving_bytes
+•	sending_bytes
+•	min_packets_len
+•	max_packets_len
+•	dns_domain_name
+•	dns_top_level_domain
+•	dns_second_level_domain
+•	dns_domain_name_length
+•	dns_subdomain_name_length
+•	uni_gram_domain_name
+•	bi_gram_domain_name
+•	tri_gram_domain_name
+•	numerical_percentage
+•	character_distribution
+•	character_entropy
+•	max_continuous_numeric_len
+•	max_continuous_alphabet_len
+•	max_continuous_consonants_len
+•	max_continuous_same_alphabet_len
+•	vowels_consonant_ratio
+•	conv_freq_vowels_consonants
+•	ans_resource_record_type
+•	ans_resource_record_class
+
+
+Time Obfuscation Features    7
+
+•	duration
+•	distinct_ttl_values
+•	ttl_values_min
+•	ttl_values_max
+•	ttl_values_mean
+•	ttl_values_mode
+•	ttl_values_median
+
+
+
+
+Flow Blending Features  7
+
+•	packets_rate
+•	packets_len_rate
+•	mean_packets_len
+•	standard_deviation_packets_len
+•	variance_packets_len
+•	coefficient_of_variation_packets_len
+•	distinct_A_records
+
