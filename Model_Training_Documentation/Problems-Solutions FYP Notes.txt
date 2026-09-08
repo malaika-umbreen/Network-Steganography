@@ -1,0 +1,95 @@
+==========================================RESEARCH JOURNEY=======================================		
+
+
+
+DataSet of ICMP-UDP-TCP generated through virtual machines   (kali sender - ubuntu reciver) kali is attacker and Ubuntu is Victim In an controlled lab environment All this perfomed of data set creation. 
+
+
+
+Dataset Generation : 
+
+libraries -python 3 version
+scapy-Cryptography.fernet- library from which fernet use.Flow blending k lie application 
+
+
+Multiple covert tools used : 
+ 
+ ptunel
+dns2tcp
+cover_tcp
+pingtransfer
+PingTunnel
+syn_covert
+hcovert
+dns_covert
+netcat
+ns2tcp
+dnscat2_1
+dnsexfiltrator
+dnslivery
+iodine_1.1
+OzymanDNS
+reverse_dns_shell
+tcp-over-dns
+tuns
+
+
+ 
+Problem : CIC-FLOW METER not captures all flows properly-
+
+Solution : We have Generated python scripts to extract flow level features we donot use cic fow meter.
+
+
+
+
+	ICMP
+
+CIC Flow Meter alternative Built our own tool - Flow level features k lie python script generate.
+
+
+
+	Self Generated UDP 
+
+
+Extract flow level features-30
+
+Flows 1200 teenon techniques.
+
+
+	DNS- TUNNELING -38  
+
+Dns tunneling 18300 total flows
+
+Dns-over-udp  features add
+
+Header manipulation- DNS queries 
+
+Header mainuplation faetures maximum in DNS 
+
+
+
+
+		TCP
+
+
+SELF GENERATED - Flow blending kam
+
+Covert channels flow blending minimum
+ 
+Header manipulation columns available.
+
+Generate number of packet level featues in lacks - converted to flow level features not enough flows minimun. 
+
+So generated more than 3 pcaps 
+
+
+
+
+flows analyze k through Behaviour ko model train .
+
+
+
+
+
+
+
